@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Sagar Ranjan Das | Digital ID</title>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Sagar Ranjan Das | Digital Profile</title>
 
     <style>
 
@@ -20,19 +23,27 @@
             min-height: 100vh;
 
             background:
-                radial-gradient(circle at 15% 20%, #4c1d95, transparent 30%),
-                radial-gradient(circle at 85% 80%, #164e63, transparent 30%),
+                radial-gradient(
+                    circle at 15% 20%,
+                    #4c1d95,
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 85% 80%,
+                    #164e63,
+                    transparent 30%
+                ),
                 #020617;
 
-            color: white;
+            color: #ffffff;
 
             overflow-x: hidden;
         }
 
 
-        /* =========================
-           BACKGROUND EFFECTS
-        ========================= */
+        /* =========================================
+           BACKGROUND GLOW
+        ========================================= */
 
         body::before {
 
@@ -45,14 +56,14 @@
 
             border-radius: 50%;
 
-            background: rgba(139,92,246,0.15);
+            background: rgba(139, 92, 246, 0.15);
 
             filter: blur(80px);
 
             top: 10%;
             left: -100px;
 
-            animation: float 7s infinite alternate ease-in-out;
+            animation: floatOne 7s infinite alternate ease-in-out;
 
             z-index: -1;
         }
@@ -69,20 +80,20 @@
 
             border-radius: 50%;
 
-            background: rgba(6,182,212,0.12);
+            background: rgba(6, 182, 212, 0.12);
 
             filter: blur(80px);
 
             bottom: 5%;
             right: -100px;
 
-            animation: float2 8s infinite alternate ease-in-out;
+            animation: floatTwo 8s infinite alternate ease-in-out;
 
             z-index: -1;
         }
 
 
-        @keyframes float {
+        @keyframes floatOne {
 
             from {
                 transform: translateY(0);
@@ -95,7 +106,7 @@
         }
 
 
-        @keyframes float2 {
+        @keyframes floatTwo {
 
             from {
                 transform: translateY(0);
@@ -108,13 +119,14 @@
         }
 
 
-        /* =========================
+        /* =========================================
            MAIN CONTAINER
-        ========================= */
+        ========================================= */
 
         .container {
 
             width: 92%;
+
             max-width: 850px;
 
             margin: auto;
@@ -123,9 +135,9 @@
         }
 
 
-        /* =========================
-           TOP PROFILE
-        ========================= */
+        /* =========================================
+           PROFILE HEADER
+        ========================================= */
 
         .profile {
 
@@ -135,14 +147,14 @@
 
             border-radius: 28px;
 
-            background: rgba(255,255,255,0.06);
+            background: rgba(255, 255, 255, 0.06);
 
-            border: 1px solid rgba(255,255,255,0.12);
+            border: 1px solid rgba(255, 255, 255, 0.12);
 
             backdrop-filter: blur(18px);
 
             box-shadow:
-                0 25px 70px rgba(0,0,0,0.45);
+                0 25px 70px rgba(0, 0, 0, 0.45);
 
             position: relative;
 
@@ -152,28 +164,35 @@
 
         .profile::before {
 
-            content: "?";
+            content: "SR";
 
             position: absolute;
 
-            font-size: 160px;
+            font-size: 150px;
 
-            opacity: 0.035;
+            font-weight: bold;
+
+            color: #ffffff;
+
+            opacity: 0.025;
 
             right: -20px;
-            top: -40px;
 
-            transform: rotate(20deg);
+            top: -35px;
+
+            transform: rotate(10deg);
+
         }
 
 
-        /* =========================
-           AVATAR
-        ========================= */
+        /* =========================================
+           PROFILE INITIALS
+        ========================================= */
 
         .avatar {
 
             width: 125px;
+
             height: 125px;
 
             margin: auto;
@@ -183,10 +202,14 @@
             display: flex;
 
             justify-content: center;
+
             align-items: center;
 
-            font-size: 45px;
+            font-size: 42px;
+
             font-weight: bold;
+
+            letter-spacing: 2px;
 
             background:
                 linear-gradient(
@@ -197,8 +220,8 @@
                 );
 
             box-shadow:
-                0 0 25px rgba(139,92,246,0.7),
-                0 0 60px rgba(6,182,212,0.25);
+                0 0 25px rgba(139, 92, 246, 0.7),
+                0 0 60px rgba(6, 182, 212, 0.25);
 
             animation: pulse 3s infinite;
         }
@@ -206,7 +229,8 @@
 
         @keyframes pulse {
 
-            0%,100% {
+            0%,
+            100% {
                 transform: scale(1);
             }
 
@@ -221,7 +245,7 @@
 
             margin-top: 22px;
 
-            font-size: clamp(30px,6vw,43px);
+            font-size: clamp(30px, 6vw, 43px);
 
             letter-spacing: 1px;
         }
@@ -234,6 +258,8 @@
             color: #c4b5fd;
 
             font-size: 17px;
+
+            letter-spacing: 1px;
         }
 
 
@@ -247,9 +273,9 @@
 
             border-radius: 30px;
 
-            background: rgba(139,92,246,0.16);
+            background: rgba(139, 92, 246, 0.16);
 
-            border: 1px solid rgba(139,92,246,0.4);
+            border: 1px solid rgba(139, 92, 246, 0.4);
 
             color: #ddd6fe;
 
@@ -257,9 +283,9 @@
         }
 
 
-        /* =========================
-           SECTION
-        ========================= */
+        /* =========================================
+           SECTIONS
+        ========================================= */
 
         .section {
 
@@ -269,15 +295,21 @@
 
             border-radius: 22px;
 
-            background: rgba(255,255,255,0.05);
+            background: rgba(255, 255, 255, 0.05);
 
-            border: 1px solid rgba(255,255,255,0.1);
+            border: 1px solid rgba(255, 255, 255, 0.10);
 
             backdrop-filter: blur(14px);
         }
 
 
         .section-title {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
 
             font-size: 21px;
 
@@ -287,9 +319,43 @@
         }
 
 
-        /* =========================
+        /* CSS ICON */
+
+        .title-icon {
+
+            width: 28px;
+
+            height: 28px;
+
+            border-radius: 8px;
+
+            display: inline-flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #8b5cf6,
+                    #06b6d4
+                );
+
+            color: white;
+
+            font-size: 14px;
+
+            font-weight: bold;
+
+            box-shadow:
+                0 0 15px rgba(139, 92, 246, 0.35);
+        }
+
+
+        /* =========================================
            ABOUT
-        ========================= */
+        ========================================= */
 
         .about {
 
@@ -303,15 +369,33 @@
 
         .highlight {
 
-            color: white;
+            color: #ffffff;
 
             font-weight: bold;
         }
 
 
-        /* =========================
-           INFO CARDS
-        ========================= */
+        .motto {
+
+            margin-top: 20px;
+
+            padding: 18px;
+
+            border-left: 3px solid #8b5cf6;
+
+            background: rgba(139, 92, 246, 0.08);
+
+            border-radius: 0 12px 12px 0;
+
+            color: #ddd6fe;
+
+            font-weight: 600;
+        }
+
+
+        /* =========================================
+           INFORMATION CARDS
+        ========================================= */
 
         .info-grid {
 
@@ -331,10 +415,10 @@
             border-radius: 17px;
 
             background:
-                rgba(255,255,255,0.045);
+                rgba(255, 255, 255, 0.045);
 
             border:
-                1px solid rgba(255,255,255,0.08);
+                1px solid rgba(255, 255, 255, 0.08);
 
             transition: 0.3s;
         }
@@ -345,16 +429,39 @@
             transform: translateY(-4px);
 
             background:
-                rgba(255,255,255,0.08);
-
+                rgba(255, 255, 255, 0.08);
         }
 
 
-        .emoji {
+        /* CSS INFO ICON */
 
-            font-size: 25px;
+        .info-icon {
 
-            margin-bottom: 10px;
+            width: 38px;
+
+            height: 38px;
+
+            border-radius: 10px;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            margin-bottom: 12px;
+
+            background:
+                rgba(139, 92, 246, 0.15);
+
+            border:
+                1px solid rgba(139, 92, 246, 0.3);
+
+            color: #c4b5fd;
+
+            font-weight: bold;
+
+            font-size: 15px;
         }
 
 
@@ -381,16 +488,18 @@
             font-weight: 600;
 
             word-break: break-word;
+
+            color: #ffffff;
         }
 
 
-        /* =========================
+        /* =========================================
            HOBBY
-        ========================= */
+        ========================================= */
 
         .hobby {
 
-            padding: 25px;
+            padding: 30px 20px;
 
             border-radius: 18px;
 
@@ -399,24 +508,52 @@
             background:
                 linear-gradient(
                     135deg,
-                    rgba(139,92,246,0.15),
-                    rgba(6,182,212,0.1)
+                    rgba(139, 92, 246, 0.15),
+                    rgba(6, 182, 212, 0.10)
                 );
 
             border:
-                1px solid rgba(139,92,246,0.25);
+                1px solid rgba(139, 92, 246, 0.25);
         }
 
 
         .hobby-icon {
 
-            font-size: 45px;
+            width: 65px;
 
-            margin-bottom: 10px;
+            height: 65px;
+
+            margin: auto;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            border-radius: 18px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #8b5cf6,
+                    #06b6d4
+                );
+
+            color: white;
+
+            font-size: 24px;
+
+            font-weight: bold;
+
+            box-shadow:
+                0 0 30px rgba(139, 92, 246, 0.35);
         }
 
 
         .hobby-text {
+
+            margin-top: 18px;
 
             font-size: 20px;
 
@@ -433,12 +570,14 @@
             color: #94a3b8;
 
             font-size: 14px;
+
+            letter-spacing: 0.5px;
         }
 
 
-        /* =========================
-           SOCIAL BUTTON
-        ========================= */
+        /* =========================================
+           INSTAGRAM
+        ========================================= */
 
         .social {
 
@@ -485,20 +624,20 @@
             transform: translateY(-3px);
 
             box-shadow:
-                0 10px 30px rgba(253,29,29,0.25);
+                0 10px 30px rgba(253, 29, 29, 0.25);
         }
 
 
-        /* =========================
+        /* =========================================
            CONTACT BUTTONS
-        ========================= */
+        ========================================= */
 
         .buttons {
 
             display: grid;
 
             grid-template-columns:
-                repeat(2,1fr);
+                repeat(2, 1fr);
 
             gap: 12px;
         }
@@ -517,12 +656,14 @@
             color: white;
 
             background:
-                rgba(255,255,255,0.07);
+                rgba(255, 255, 255, 0.07);
 
             border:
-                1px solid rgba(255,255,255,0.1);
+                1px solid rgba(255, 255, 255, 0.10);
 
             transition: 0.3s;
+
+            font-weight: 600;
         }
 
 
@@ -531,13 +672,16 @@
             transform: translateY(-3px);
 
             background:
-                rgba(139,92,246,0.18);
+                rgba(139, 92, 246, 0.18);
+
+            box-shadow:
+                0 8px 25px rgba(99, 102, 241, 0.15);
         }
 
 
-        /* =========================
+        /* =========================================
            FOOTER
-        ========================= */
+        ========================================= */
 
         footer {
 
@@ -548,6 +692,8 @@
             color: #64748b;
 
             font-size: 13px;
+
+            line-height: 1.8;
         }
 
 
@@ -557,11 +703,11 @@
         }
 
 
-        /* =========================
+        /* =========================================
            MOBILE
-        ========================= */
+        ========================================= */
 
-        @media(max-width:600px) {
+        @media (max-width: 600px) {
 
             .container {
 
@@ -600,6 +746,12 @@
                 font-size: 18px;
             }
 
+
+            .tagline {
+
+                font-size: 15px;
+            }
+
         }
 
     </style>
@@ -613,9 +765,9 @@
 <div class="container">
 
 
-    <!-- =========================
-         PROFILE HEADER
-    ========================== -->
+    <!-- =========================================
+         PROFILE
+    ========================================== -->
 
     <div class="profile">
 
@@ -630,31 +782,31 @@
 
 
         <div class="tagline">
-
-            ?? Build • Create • Explore ??
-
+            BUILD  |  CREATE  |  EXPLORE
         </div>
 
 
         <div class="roll">
-
-            ?? Roll No. 837
-
+            ROLL NO. 837
         </div>
 
     </div>
 
 
 
-    <!-- =========================
+    <!-- =========================================
          ABOUT
-    ========================== -->
+    ========================================== -->
 
     <div class="section">
 
         <div class="section-title">
 
-            ?? A Little About Me
+            <span class="title-icon">
+                A
+            </span>
+
+            A LITTLE ABOUT ME
 
         </div>
 
@@ -666,33 +818,38 @@
                 Sagar Ranjan Das
             </span>.
 
-            I enjoy turning ideas into something real —
-            whether that's building something, experimenting
-            with technology, or simply trying something new.
-
-            <br><br>
-
-            My personal motto?
-
-            <span class="highlight">
-                If it can be imagined, it can probably be built. ??
-            </span>
+            I enjoy turning ideas into something real -
+            whether that's building something,
+            experimenting with technology,
+            or simply trying something new.
 
         </p>
+
+
+        <div class="motto">
+
+            MY MOTTO:
+            If it can be imagined, it can probably be built.
+
+        </div>
 
     </div>
 
 
 
-    <!-- =========================
-         PERSONAL INFORMATION
-    ========================== -->
+    <!-- =========================================
+         DIGITAL ID
+    ========================================== -->
 
     <div class="section">
 
         <div class="section-title">
 
-            ?? Digital ID
+            <span class="title-icon">
+                ID
+            </span>
+
+            DIGITAL ID
 
         </div>
 
@@ -700,14 +857,16 @@
         <div class="info-grid">
 
 
+            <!-- NAME -->
+
             <div class="info-card">
 
-                <div class="emoji">
-                    ??
+                <div class="info-icon">
+                    N
                 </div>
 
                 <span class="label">
-                    Name
+                    NAME
                 </span>
 
                 <div class="value">
@@ -717,14 +876,16 @@
             </div>
 
 
+            <!-- ROLL -->
+
             <div class="info-card">
 
-                <div class="emoji">
-                    ??
+                <div class="info-icon">
+                    #
                 </div>
 
                 <span class="label">
-                    Roll Number
+                    ROLL NUMBER
                 </span>
 
                 <div class="value">
@@ -734,14 +895,16 @@
             </div>
 
 
+            <!-- CONTACT -->
+
             <div class="info-card">
 
-                <div class="emoji">
-                    ??
+                <div class="info-icon">
+                    T
                 </div>
 
                 <span class="label">
-                    Contact
+                    CONTACT
                 </span>
 
                 <div class="value">
@@ -751,14 +914,16 @@
             </div>
 
 
+            <!-- EMAIL -->
+
             <div class="info-card">
 
-                <div class="emoji">
-                    ??
+                <div class="info-icon">
+                    @
                 </div>
 
                 <span class="label">
-                    E-Mail
+                    E-MAIL
                 </span>
 
                 <div class="value">
@@ -773,15 +938,19 @@
 
 
 
-    <!-- =========================
+    <!-- =========================================
          HOBBY
-    ========================== -->
+    ========================================== -->
 
     <div class="section">
 
         <div class="section-title">
 
-            ??? My Thing
+            <span class="title-icon">
+                +
+            </span>
+
+            MY THING
 
         </div>
 
@@ -789,20 +958,18 @@
         <div class="hobby">
 
             <div class="hobby-icon">
-                ????
+                BUILD
             </div>
 
 
             <div class="hobby-text">
-
                 Creating / Building Something New!
-
             </div>
 
 
             <div class="hobby-sub">
 
-                Curiosity ? Idea ? Build ? Experiment ? Repeat ??
+                Curiosity | Idea | Build | Experiment | Repeat
 
             </div>
 
@@ -812,15 +979,19 @@
 
 
 
-    <!-- =========================
+    <!-- =========================================
          INSTAGRAM
-    ========================== -->
+    ========================================== -->
 
     <div class="section">
 
         <div class="section-title">
 
-            ?? Find Me
+            <span class="title-icon">
+                IG
+            </span>
+
+            FIND ME
 
         </div>
 
@@ -831,9 +1002,10 @@
                 class="instagram"
                 href="https://www.instagram.com/sagar.ranjan_/"
                 target="_blank"
+                rel="noopener noreferrer"
             >
 
-                ?? @sagar.ranjan_
+                @sagar.ranjan_
 
             </a>
 
@@ -843,15 +1015,19 @@
 
 
 
-    <!-- =========================
+    <!-- =========================================
          CONTACT
-    ========================== -->
+    ========================================== -->
 
     <div class="section">
 
         <div class="section-title">
 
-            ?? Let's Connect
+            <span class="title-icon">
+                GO
+            </span>
+
+            LET'S CONNECT
 
         </div>
 
@@ -863,9 +1039,7 @@
                 class="button"
                 href="tel:+917853893954"
             >
-
-                ?? Call Me
-
+                CALL ME
             </a>
 
 
@@ -873,9 +1047,7 @@
                 class="button"
                 href="mailto:sagar0ranjan0das@gmail.com"
             >
-
-                ?? Send E-Mail
-
+                SEND E-MAIL
             </a>
 
 
@@ -883,21 +1055,18 @@
                 class="button"
                 href="https://www.instagram.com/sagar.ranjan_/"
                 target="_blank"
+                rel="noopener noreferrer"
             >
-
-                ?? Instagram
-
+                INSTAGRAM
             </a>
 
 
             <a
                 class="button"
-                href="#"
-                onclick="alert('More links coming soon! ??')"
+                href="javascript:void(0)"
+                onclick="alert('More links coming soon!')"
             >
-
-                ?? More Coming Soon
-
+                MORE COMING SOON
             </a>
 
 
@@ -907,18 +1076,18 @@
 
 
 
-    <!-- =========================
+    <!-- =========================================
          FOOTER
-    ========================== -->
+    ========================================== -->
 
     <footer>
 
-        Built with curiosity & caffeine ???
+        BUILT WITH CURIOSITY AND CREATIVITY
 
-        <br><br>
+        <br>
 
         <span class="footer-highlight">
-            © 2026 Sagar Ranjan Das
+            2026 - SAGAR RANJAN DAS
         </span>
 
     </footer>
